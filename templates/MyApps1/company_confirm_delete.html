@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+{% extends 'MyApps1/base.html'%}
+{% block body_block %}
+    <h1>Delete ("{{ company.name }}")company date</h1>
+    <form method="post">
+    {% csrf_token %}
+    yes:<input type="submit" value="Delete-Company-Record"><br/><br/>
+    No(stop) : <a href="/detail/{{ company.id }}">Cancel-Delete</a>
+    </form>
+{% endblock %}

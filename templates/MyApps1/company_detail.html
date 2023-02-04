@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends 'MyApps1/base.html' %}
+{% block body_block %}
+    <h1>Your selected Company Information</h1>
+    <hr/>
+    <ul>
+    <h3><li>{{ company.name }}</li></h3>
+    <h3><li>{{ company.location }}</li></h3>
+    <h3><li>{{ company.ceo }}</li></h3>
+    </ul>
+    <a href="/update/{{ company.id }}">Update Company data</a><br/>
+    <br/>
+    <a href="/delete/{{ company.id }}">Delete Company data</a>
+{% endblock %}
